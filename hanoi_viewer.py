@@ -1,10 +1,25 @@
+"""
+Script By Benj
+
+This script allow you to see how to solve the famous Hanoï towers problem or by an autmoatic display of each steps, 
+or by manual control via two buttons. The script also allow to see the number of moves, reset the process etc
+
+Note that the script might be updtated in a near futur, don't hesitate to often check the github page !
+"""
 # coding: utf-8
 #importing libs
-import pygame
+
 import datetime
 import sys
 
-from pygame.constants import TIMER_RESOLUTION
+from pygame.time import Clock
+
+try:
+    import pygame
+except:
+    print("Uh Oh, it seems that pygame is not detected on you computer, install pygame and try again")
+    input("press any key to exit...")
+    sys.exit()
 
 
 def rings_number_request():
@@ -137,7 +152,8 @@ class PygameSetup():
                                     ring_x = rod["coord"] - ((ring_widh//2) - 3)
                                     pygame.draw.rect(screen, self.blue, pygame.Rect(ring_x, ring_y, ring_widh, ring_height))
                                     ring_y -= 22
-                                    pygame.display.flip()
+            pygame.display.flip()
+            hn.step_index += 1
         except IndexError:
             pass
 
@@ -216,8 +232,7 @@ class PygameSetup():
 pygame.init()
 #init the pygame module
 
-#rings = rings_number_request()
-rings = 5
+rings = rings_number_request()
 # request the number of rings
 ps = PygameSetup(rings)
 hn = Hanoi(rings)
@@ -239,7 +254,6 @@ pygame.display.set_caption("Hanoï Viewer")
 # screen init
 
 launched = True
-
 while launched:
     if ps.first_run:
         ps.first_drawing()
@@ -248,7 +262,6 @@ while launched:
     now = datetime.datetime.now()
     if second != now.second:
         if ps.play:
-            hn.step_index += 1
             ps.rings_drawing()
         second = now.second
 
@@ -267,7 +280,6 @@ while launched:
                 pygame.display.flip()
             elif (550<event.pos[0]<700) and (320<event.pos[1]<370):
                 ps.rings_drawing()
-                hn.step_index += 1
             elif (100<event.pos[0]<250) and (320<event.pos[1]<370):
                 if hn.step_index-1 >= 0:
                     hn.step_index -= 1
