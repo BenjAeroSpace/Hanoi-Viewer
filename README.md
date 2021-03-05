@@ -1,5 +1,5 @@
 # Hanoi-Viewer
-Hanoï Viewer is a program made in Python using Pygame to see how to solve the Hanoï towers, working for up to 11 rings (limitation is due to display only, it can calculate for n rings)
+Hanoï Viewer is a script made in Python using Pygame to see how to solve the Hanoï towers. It feature an autmoatic player and a step by step system to see how to move the rings.
 
 If you don't know what's the Hanoï towers, here is a small explanation.
 

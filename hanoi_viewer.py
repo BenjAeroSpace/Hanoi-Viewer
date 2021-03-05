@@ -1,9 +1,6 @@
 """
-Script By Benj
-
-
 This script allow you to see how to solve the famous Hanoï towers problem or by an autmoatic display of each steps, 
-or by manual control via two buttons. The script also allow to see the number of moves, reset the process etc
+by manual control via two buttons. The script also allow to see the number of moves, reset the process etc
 
 If you don't know what's the Hanoï towers, here is a small explanation.
 
@@ -11,6 +8,9 @@ The goal is to move all the rings from the left to the right, but you can only m
 and you can't place a ring onto a smaller one !
 
 Note that the script might be updtated in the futur, don't hesitate to often check the github page !
+
+2021
+Benj
 """
 # coding: utf-8
 #importing libs
