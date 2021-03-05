@@ -3,7 +3,7 @@ Script By Benj
 
 
 This script allow you to see how to solve the famous Hanoï towers problem or by an autmoatic display of each steps, 
-or by manual control via two buttons. The script also allow to see the number of moves, reset the process etc
+by manual control via two buttons. The script also allow to see the number of moves, reset the process etc
 
 If you don't know what's the Hanoï towers, here is a small explanation.
 
