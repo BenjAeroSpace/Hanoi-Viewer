@@ -98,8 +98,8 @@ class PygameSetup():
         self.grey = pygame.Color(50, 50, 50)
         self.pink = pygame.Color(210, 0, 255)
         # pygame colors
-        self.arial40 = pygame.font.SysFont("arial",40)
-        self.arial30 = pygame.font.SysFont("arial",30)
+        self.arial40 = pygame.font.SysFont("arial",30)
+        self.arial30 = pygame.font.SysFont("arial",20)
         self.arial20 = pygame.font.SysFont("arial",20)
         # Pygame fonts
         self.screen_size = (800,400)
